@@ -1,0 +1,175 @@
+/* ==========================
+   AddProperty.css
+========================== */
+.add-property-page-wrapper {
+  min-height: 100vh;
+  background: url('./assets/home-bg.jpg') no-repeat center center / cover;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-property-page-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.add-property-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.add-property-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  color: #333;
+}
+
+.add-property-container input,
+.add-property-container textarea,
+.add-property-container select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  font-family: inherit;
+}
+
+.add-property-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.add-property-container input:focus,
+.add-property-container textarea:focus,
+.add-property-container select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #6e8efb50;
+  border-color: #6e8efb;
+}
+
+.add-property-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(110, 142, 251, 0.3);
+}
+
+.add-property-container button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(110, 142, 251, 0.4);
+}
+
+.add-property-container .error {
+  text-align: center;
+  color: #ff3333;
+  margin-bottom: 10px;
+  animation: pulse 1s infinite;
+}
+
+/* Reuse the same animations from Login.css */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.02); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* Add these to your existing CSS */
+/* .image-upload-section {
+  margin: 20px 0;
+}
+
+.image-upload-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.image-preview {
+  margin-top: 15px;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+} */
+
+/* PropertyDetail.css additions */
+/* .property-images-section {
+  margin: 20px 0;
+}
+
+.main-image {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.main-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+} */
